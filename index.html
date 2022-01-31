@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript-Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+    
+        <table class="main-table">
+            <tr>
+                <td colspan="5"><input type="text" name="userinput" value="0" id="userinput" max="5"></td>
+            </tr>
+            <tr>
+                <td><button id="deg" onclick="deg(document.getElementById('userinput'))">DEG</button></td>
+                <td><button id="f-e" onclick="ex(document.getElementById('userinput'))">F-E</button></td>
+            </tr>
+            <tr>
+                <td><button id="mc" onclick="MC(document.getElementById('userinput'))">MC</button></td>
+                <td><button id="mr" onclick="MR(document.getElementById('userinput'))">MR</button></td>
+                <td><button id="mplus" onclick="MPLUS(document.getElementById('userinput'))">M+</button></td>
+                <td><button id="m-" onclick="MMINUS(document.getElementById('userinput'))">M-</button></td>
+                <td><button id="ms" onclick="MS(document.getElementById('userinput'))">MS</button></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><div class="dropdown">
+                    <button class="dropbtn"><img src="../JS_assignment/Images/pythagoras.png">Trigonometry  <i class="fa fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                      <a href="#" onclick="sin(document.getElementById('userinput'))">sin</a>
+                      <a href="#" onclick="cos(document.getElementById('userinput'))">cos</a>
+                      <a href="#" onclick="tan(document.getElementById('userinput'))">tan</a>
+                    </div>
+                  </div></td>
+                <td colspan="2"><div class="dropdown">
+                    <button class="dropbtn">ƒ Function <i class="fa fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                      <a href="#" onclick="abs(document.getElementById('userinput'))">Abs()</a>
+                      <a href="#" onclick="ceil(document.getElementById('userinput'))">ceil()</a>
+                      <a href="#" onclick="floor(document.getElementById('userinput'))">floor()</a>
+                      <a href="#" onclick="round(document.getElementById('userinput'))">round()</a>
+                    </div>
+                  </div></td>
+            </tr>
+            <tr>
+                <td><button>2<sup>nd</sup></button></td>
+                <td><button onclick="pie()">&#960;</button></td>
+                <td><button onclick="e()">e</button></td>
+                <td><button onclick="allclear()">AC</button></td>
+                <td><button onclick="clearchar(document.getElementById('userinput'))">C</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="square(document.getElementById('userinput'))">x<sup>2</sup></button></td>
+                <td><button onclick="invdiv(document.getElementById('userinput'))">1/x</button></td>
+                <td><button onclick="Mod(document.getElementById('userinput'))">|x|</button></td>
+                <td><button onclick="exp(document.getElementById('userinput'))">exp</button></td>
+                <td><button onclick="add(document.getElementById('userinput'),'%')">mod</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="sqrt(document.getElementById('userinput'))"><sup>2</sup>&#8730; x</button></td>
+                <td><button onclick="add(document.getElementById('userinput'),'(')">(</button></td>
+                <td><button onclick="add(document.getElementById('userinput'),')')">)</button></td>
+                <td><button onclick="fact(document.getElementById('userinput'))">n!</button></td>
+                <td><button id="div" onclick="add(document.getElementById('userinput'),'/')">&#xF7;</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="add(document.getElementById('userinput'),'**')">x <sup>y</sup></button></td>
+                <td><button class="num" onclick="add(document.getElementById('userinput'),'7')">7</button></td>
+                <td><button class="num" onclick="add(document.getElementById('userinput'),'8')">8</button></td>
+                <td><button class="num" onclick="add(document.getElementById('userinput'),'9')">9</button></td>
+                <td><button id="mul" onclick="add(document.getElementById('userinput'),'*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="ten(document.getElementById('userinput'))">10 <sup>x</sup></button></td>
+                <td><button class="num" onclick="add(document.getElementById('userinput'),'4')">4</button></td>
+                <td><button class="num" onclick="add(document.getElementById('userinput'),'5')">5</button></td>
+                <td><button class="num" onclick="add(document.getElementById('userinput'),'6')">6</button></td>
+                <td><button id="min" onclick="add(document.getElementById('userinput'),'-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="log(document.getElementById('userinput'))">log</button></td>
+                <td><button class="num" onclick="add(document.getElementById('userinput'),'1')">1</button></td>
+                <td><button class="num" onclick="add(document.getElementById('userinput'),'2')">2</button></td>
+                <td><button class="num" onclick="add(document.getElementById('userinput'),'3')">3</button></td>
+                <td><button id="plus" onclick="add(document.getElementById('userinput'),'+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="ln(document.getElementById('userinput'))">ln</button></td>
+                <td><button class="pm" onclick="plusmin(document.getElementById('userinput'))">+/-</button></td>
+                <td><button class="num" onclick="add(document.getElementById('userinput'),'0')">0</button></td>
+                <td><button class="dot" onclick="add(document.getElementById('userinput'),'.')">.</button></td>
+                <td><button class="equal" onclick="result(document.getElementById('userinput'))">=</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
